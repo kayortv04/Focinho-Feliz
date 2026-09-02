@@ -1,0 +1,223 @@
+/* ==========================================================================
+   Estilos Gerais e Estrutura Principal
+   ==========================================================================
+   COMO SELECIONAR ID E CLASS NO CSS:
+   - ID (#)    : Seleciona um elemento pelo seu ID único. Exemplo: #rodape, #logo-cabecalho
+   - CLASS (.): Seleciona elementos pela sua classe reutilizável. Exemplo: .rodape-coluna, .btn-mapa
+   ========================================================================== */
+ 
+/* Configuração do corpo da página: largura fixa de 940px, centralização horizontal e tipografia base */
+body {
+  width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Arial, sans-serif;
+  color: #333333;
+}
+ 
+/* ==========================================================================
+   Cabeçalhos e Títulos
+   ========================================================================== */
+ 
+/* Título principal (H1) com fundo destacado e logo ao lado */
+h1 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 15px;
+  background-color: #f2f2f2;
+  color: #1F4E79;
+}
+ 
+/* Logo exibido no cabeçalho */
+#logo-cabecalho {
+  height: 50px;
+  width: auto;
+}
+ 
+/* Subtítulos de seções (H2) */
+h2 {
+  margin-top: 30px;
+  color: #2e8314;
+}
+ 
+/* ==========================================================================
+   Conteúdo de Texto e Figuras
+   ========================================================================== */
+ 
+/* Parágrafos: alinhamento com recuo de parágrafo, texto justificado e fonte ampliada */
+p {
+  padding: 0 45px;
+  text-indent: 15px; /* text-indent: Recua a primeira linha do texto do parágrafo em 15px */
+  line-height: 1.6;  /* line-height: Define o espaçamento/altura da linha entre as linhas de texto (1.6x o tamanho da fonte) */
+  text-align: justify;
+  font-size: 18px;
+}
+ 
+/* Lista de diferenciais da empresa com fonte ampliada */
+ul {
+  padding-left: 65px;
+  font-size: 18px;
+  line-height: 1.6; /* line-height: Mantém o espaçamento vertical proporcional entre as linhas dos itens */
+}
+ 
+ul li {
+  margin-bottom: 8px;
+}
+ 
+/* Blocos de figura (container para imagem + legenda) */
+figure {
+  padding: 15px;
+  margin: 30px;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+ 
+/* Legendas das figuras em itálico */
+figcaption {
+  margin-top: 10px;
+  font-style: italic;
+  color: #595959;
+}
+ 
+/* Section/Figura do Centro de Distribuição - largura definida e centralizado */
+#centro-distribuicao {
+  width: 550px;
+  margin: 0 auto;
+}
+ 
+/* Imagem dentro do bloco de centro de distribuição (ocupa 100% da largura do container) */
+#centro-distribuicao img {
+  width: 100%;
+}
+ 
+/* Imagem de destaque posicionada à direita (float) com margem lateral */
+#pet-destaque {
+  float: right; /* float: right -> Posiciona/flutua o elemento no lado direito, fazendo o texto ao redor contorná-lo */
+  width: 300px;
+  margin: 0 0 10px 20px;
+}
+ 
+/* Ajuste da imagem dentro do bloco de destaque */
+#pet-destaque img {
+  width: 100%;
+}
+ 
+/* ==========================================================================
+   Rodapé
+   ========================================================================== */
+ 
+/* Área do rodapé estruturada com borda e fundo suave */
+#rodape {
+  margin-top: 40px;
+  padding: 25px 20px 15px 20px;
+  color: #555555;
+  background-color: #f8f9fa;
+  border-top: 2px solid #1F4E79;
+}
+ 
+/* Container flexível das colunas do rodapé */
+.rodape-conteudo {
+  display: flex;
+  justify-content: space-between; /* justify-content: space-between -> Distribui os itens flexíveis com espaço uniforme entre eles */
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+ 
+/* Colunas individuais do rodapé */
+.rodape-coluna {
+  flex: 1;
+  min-width: 180px;
+}
+ 
+/* Títulos de cada coluna no rodapé */
+.rodape-coluna h3 {
+  color: #1F4E79;
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+ 
+/* Parágrafos internos das colunas do rodapé */
+.rodape-coluna p {
+  padding: 0;
+  margin: 6px 0;
+  text-indent: 0;
+  font-size: 14px;
+  text-align: left;
+}
+ 
+/* Links das redes sociais e contatos no rodapé */
+.rodape-coluna a {
+  color: #1F4E79;
+  text-decoration: none;
+}
+ 
+.rodape-coluna a:hover {
+  text-decoration: underline;
+}
+ 
+/* Botão estilizado para o Google Maps */
+.btn-mapa {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 6px 12px;
+  background-color: #1F4E79;
+  color: #ffffff !important;
+  border-radius: 4px;
+  font-size: 13px;
+  text-decoration: none !important;
+}
+ 
+.btn-mapa:hover {
+  background-color: #153654;
+}
+ 
+/* Logo presente no rodapé */
+#rodape img {
+  width: 90px;
+  vertical-align: middle;
+  margin-bottom: 8px;
+}
+ 
+/* Slogan do rodapé */
+.rodape-slogan {
+  font-style: italic;
+  color: #777777;
+}
+ 
+/* Linha final de Direitos Autorais */
+.rodape-copyright {
+  text-align: center;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+  font-size: 13px;
+  color: #777777;
+}
+/* Botão do menu mobile: escondido em telas grandes por padrão */
+#botao-menu {
+  display: none;
+}
+ 
+/* Efeito de destaque ao clicar na imagem do pet */
+#pet-destaque.destaque-selecionado {
+  box-shadow: 0 0 0 4px #1F4E79;
+}
+ 
+/* Media query: em telas de até 600px, esconde o nav e mostra o botão */
+@media (max-width: 600px) {
+  #botao-menu {
+    display: block;
+  }
+ 
+  nav {
+    display: none;
+  }
+ 
+  nav.menu-aberto {
+    display: block;
+  }
+}
